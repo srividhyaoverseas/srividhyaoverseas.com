@@ -313,6 +313,147 @@ th, td { border-bottom-color: rgba(11, 42, 74, 0.08); }
 .fab-call { background: var(--grad-primary); }
 .fab-whatsapp { background: linear-gradient(135deg, #3ee07c, #1fae55); }
 
+/* ---------- Video testimonials (YouTube Shorts) ---------- */
+.vt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.vt-card {
+  margin: 0;
+  padding: 10px;
+  border-radius: 22px;
+  background: var(--g-surface);
+  border: 1px solid var(--g-border);
+  -webkit-backdrop-filter: var(--g-blur);
+  backdrop-filter: var(--g-blur);
+  box-shadow: var(--g-shadow);
+  transition: transform 0.25s, box-shadow 0.25s, opacity 0.6s;
+}
+.vt-card:hover { transform: translateY(-4px); box-shadow: var(--g-shadow-hover); }
+.vt-frame { position: relative; aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; background: #061629; }
+.vt-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vt-poster { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+.vt-poster img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.vt-card:hover .vt-poster img { transform: scale(1.05); }
+.vt-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6, 22, 41, 0.1) 40%, rgba(6, 22, 41, 0.65) 100%); }
+.vt-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.vt-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin: -34px 0 0 -34px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s, background 0.25s;
+}
+.vt-play svg { margin-left: 4px; }
+.vt-play::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  animation: svo-ring 2s ease-out infinite;
+}
+@keyframes svo-ring { from { transform: scale(0.85); opacity: 1; } to { transform: scale(1.35); opacity: 0; } }
+.vt-poster:hover .vt-play,
+.vt-poster:focus-visible .vt-play { transform: scale(1.08); background: rgba(245, 165, 36, 0.9); border-color: rgba(255, 220, 160, 0.8); color: var(--navy-900); }
+.vt-card figcaption { padding: 12px 6px 4px; }
+.vt-card figcaption p { margin: 0 0 6px; font-weight: 600; font-size: 0.92rem; color: var(--navy-800); line-height: 1.4; }
+.vt-card figcaption a { font-size: 0.82rem; font-weight: 600; }
+
+/* Written testimonials with photo */
+.st-list { display: grid; gap: 22px; margin-top: 34px; }
+.st-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--g-surface);
+  border: 1px solid var(--g-border);
+  -webkit-backdrop-filter: var(--g-blur);
+  backdrop-filter: var(--g-blur);
+  box-shadow: var(--g-shadow);
+}
+.st-photo { position: relative; min-height: 100%; }
+.st-photo picture,
+.st-photo img { display: block; width: 100%; height: 100%; }
+.st-photo img { object-fit: cover; object-position: center 20%; aspect-ratio: 3 / 4; }
+.st-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, rgba(255, 255, 255, 0.25)); }
+.st-body { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 40px 44px; }
+.st-quote-icon { color: var(--accent); margin-bottom: 14px; }
+.st-body blockquote {
+  margin: 0 0 22px;
+  font-family: var(--font-head);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--navy-800);
+}
+.st-body figcaption strong { display: block; font-family: var(--font-head); font-size: 1.15rem; color: var(--navy-800); }
+.st-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 6px; color: var(--muted); font-size: 0.9rem; }
+.st-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.st-meta svg { color: var(--blue-600); }
+
+/* Two or more reviews: side-by-side cards with the photo on top */
+.st-list.is-multi { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.st-list.is-multi .st-card { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+.st-list.is-multi .st-photo img { aspect-ratio: 16 / 11; }
+.st-list.is-multi .st-photo::after { background: linear-gradient(180deg, transparent 65%, rgba(255, 255, 255, 0.3)); }
+.st-list.is-multi .st-body { justify-content: flex-start; padding: 28px 32px 32px; }
+.st-list.is-multi .st-body blockquote { font-size: clamp(1.02rem, 1.4vw, 1.18rem); }
+
+@media (max-width: 980px) {
+  .vt-grid { grid-template-columns: repeat(2, 1fr); }
+  .st-card { grid-template-columns: 220px 1fr; }
+  .st-list.is-multi { grid-template-columns: 1fr; }
+  .st-body { padding: 28px; }
+}
+@media (max-width: 640px) {
+  .st-card { grid-template-columns: 1fr; }
+  .st-photo img,
+  .st-list.is-multi .st-photo img { aspect-ratio: 4 / 3; }
+  .st-photo::after { background: linear-gradient(180deg, transparent 60%, rgba(255, 255, 255, 0.3)); }
+  .st-body { padding: 22px; }
+}
+@media (max-width: 640px) {
+  /* Swipeable row of vertical videos on phones */
+  .vt-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 0 -16px;
+    padding: 4px 16px 12px;
+    scrollbar-width: none;
+  }
+  .vt-grid::-webkit-scrollbar { display: none; }
+  .vt-card { flex: 0 0 72%; scroll-snap-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vt-play::after { animation: none; }
+}
+
 /* ---------- Logo ---------- */
 .logo { display: inline-flex; align-items: center; flex: none; }
 .logo picture { display: block; }

@@ -7,6 +7,7 @@ import {
 import Seo from '../components/Seo.jsx';
 import Icon from '../components/Icon.jsx';
 import HeroVideo from '../components/HeroVideo.jsx';
+import VideoTestimonials from '../components/VideoTestimonials.jsx';
 import { SectionHeading, FAQ, CTABand, BlogCard } from '../components/ui.jsx';
 import { useEnquiry } from '../components/EnquiryModal.jsx';
 import { studyCountries } from '../data/studyCountries.js';
@@ -15,7 +16,6 @@ import { services, journey } from '../data/services.js';
 import { exams } from '../data/exams.js';
 import { homeFaqs } from '../data/faqs.js';
 import { blogPosts } from '../data/blog.js';
-import { testimonials } from '../data/people.js';
 import { telLink, whatsappLink, flagUrl } from '../utils/contact.js';
 import { SITE } from '../config/site.js';
 
@@ -369,6 +369,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ VIDEO TESTIMONIALS ============ */}
+      <section className="section" id="student-stories">
+        <div className="container">
+          <VideoTestimonials />
+        </div>
+      </section>
+
       {/* ============ SERVICES ============ */}
       <section className="section">
         <div className="container">
@@ -409,26 +416,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ============ TESTIMONIALS (only when genuine ones are added) ============ */}
-      {testimonials.length > 0 && (
-        <section className="section">
-          <div className="container">
-            <SectionHeading eyebrow="Student stories" title="Hear from our students" />
-            <div className="card-grid cols-3">
-              {testimonials.map((t) => (
-                <figure key={t.name} className="testimonial reveal">
-                  <blockquote>“{t.quote}”</blockquote>
-                  <figcaption>
-                    <strong>{t.name}</strong>
-                    <span>{[t.course, t.city].filter(Boolean).join(' • ')}</span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ============ LOCAL OFFICES ============ */}
       <section className="section">

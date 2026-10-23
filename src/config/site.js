@@ -54,7 +54,7 @@ export const SITE = {
   social: {
     instagram: '',
     facebook: '',
-    youtube: '',
+    youtube: 'https://www.youtube.com/@SriVidhyaOverseas',
     linkedin: '',
   },
 };

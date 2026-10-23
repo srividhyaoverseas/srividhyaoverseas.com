@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import { pageFaqs } from '../data/pageFaqs.js';
 import EligibilityChecker from '../components/EligibilityChecker.jsx';
+import VideoTestimonials from '../components/VideoTestimonials.jsx';
 import { PageHero, SectionHeading, FAQ, CTABand, CheckList, CountryCard, Journey } from '../components/ui.jsx';
 import { mbbsCountries, mbbsEligibility, mbbsDocuments, mbbsAdmissionSteps, nmcRules } from '../data/mbbsCountries.js';
 import { useEnquiry } from '../components/EnquiryModal.jsx';
@@ -101,7 +102,13 @@ export default function MbbsAbroad() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="student-stories">
+        <div className="container">
+          <VideoTestimonials title="MBBS abroad — student stories" subtitle="Hear from students who started their MBBS journey with us. Tap any video to play." />
+        </div>
+      </section>
+
+      <section className="section section-alt">
         <div className="container container-narrow">
           <FAQ items={faqs} subtitle="Questions NEET students and parents ask us most." />
           <p className="center mt">

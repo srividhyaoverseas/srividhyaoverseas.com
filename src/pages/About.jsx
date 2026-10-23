@@ -1,6 +1,7 @@
 import Seo from '../components/Seo.jsx';
 import { PageHero, SectionHeading, CTABand, CheckList, Journey } from '../components/ui.jsx';
 import { team } from '../data/people.js';
+import VideoTestimonials from '../components/VideoTestimonials.jsx';
 import { journey } from '../data/services.js';
 import { SITE } from '../config/site.js';
 
@@ -92,6 +93,12 @@ export default function About() {
           </div>
         </section>
       )}
+
+      <section className="section" id="student-stories">
+        <div className="container">
+          <VideoTestimonials />
+        </div>
+      </section>
 
       <section className="section section-alt">
         <div className="container container-narrow content center">
