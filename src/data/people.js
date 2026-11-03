@@ -45,4 +45,10 @@ export const team = [
     photo: '/assets/aistudio/WhatsApp_Image_2026-10-01_at_11.06.48_PM_989d1a41.jpeg',
     bio: 'Dedicated to ethical, transparent overseas education and empowering students with personalized guidance and parent peace of mind.',
   },
+  {
+    name: 'Pruthvi Raj Azmeera',
+    role: 'Co-Founder – Sri Vidhya Overseas',
+    photo: '/assets/aistudio/WhatsApp_Image_2026-11-04_at_1.17.24_AM_dfe3c6d8.jpeg',
+    bio: 'Committed to helping students explore international education opportunities, make informed decisions, and turn their global ambitions into reality.',
+  },
 ];
