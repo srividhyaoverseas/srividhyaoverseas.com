@@ -23,6 +23,7 @@ const serviceLinks = [
 ];
 
 const simpleLinks = [
+  { to: '/about#founder', label: 'Founder’s Message' },
   { to: '/exams', label: 'Exams' },
   { to: '/events', label: 'Events' },
   { to: '/blog', label: 'Blog' },

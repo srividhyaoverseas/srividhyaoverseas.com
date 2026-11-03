@@ -8,6 +8,7 @@ import Seo from '../components/Seo.jsx';
 import Icon from '../components/Icon.jsx';
 import HeroVideo from '../components/HeroVideo.jsx';
 import VideoTestimonials from '../components/VideoTestimonials.jsx';
+import FounderMessage from '../components/FounderMessage.jsx';
 import { SectionHeading, FAQ, CTABand, BlogCard } from '../components/ui.jsx';
 import { useEnquiry } from '../components/EnquiryModal.jsx';
 import { studyCountries } from '../data/studyCountries.js';
@@ -338,6 +339,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ============ FOUNDER'S MESSAGE ============ */}
+      <FounderMessage id="founder-message" />
 
       {/* ============ PROMISE ============ */}
       <section className="section section-dark">

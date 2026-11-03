@@ -1,0 +1,391 @@
+/* ==========================================================================
+   Founder Message Section — Sri Vidhya Overseas
+   Executive, high-trust presentation for Founder Vamshi Raj
+   ========================================================================== */
+
+.founder-section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.founder-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  background: radial-gradient(circle at 18% 30%, rgba(31, 123, 208, 0.08), transparent 50%),
+              radial-gradient(circle at 85% 70%, rgba(245, 165, 36, 0.08), transparent 45%);
+  pointer-events: none;
+}
+
+.founder-card {
+  position: relative;
+  background: var(--g-surface-strong, rgba(255, 255, 255, 0.88));
+  backdrop-filter: var(--g-blur, blur(16px));
+  -webkit-backdrop-filter: var(--g-blur, blur(16px));
+  border: 1px solid var(--g-border, rgba(255, 255, 255, 0.9));
+  border-radius: 28px;
+  box-shadow: 0 20px 50px -15px rgba(11, 42, 74, 0.12), 0 0 0 1px rgba(11, 42, 74, 0.04);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+/* Portrait column */
+.founder-media-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.founder-img-wrapper {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0b2a4a, #1f7bd0);
+  box-shadow: 0 16px 36px -10px rgba(11, 42, 74, 0.28);
+  aspect-ratio: 4 / 5.2;
+}
+
+.founder-img-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+.founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.founder-card:hover .founder-img {
+  transform: scale(1.02);
+}
+
+.founder-verified-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(7, 26, 48, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.founder-verified-badge svg {
+  color: #38bdf8;
+}
+
+.founder-profile-meta {
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line, #dfe6ee);
+  border-radius: 16px;
+}
+
+.founder-name-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.founder-name-title {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy-900, #071a30);
+  margin: 0;
+}
+
+.founder-badge-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--accent-50, #fff6e6);
+  color: var(--accent-600, #dd8f0f);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 165, 36, 0.3);
+}
+
+.founder-role-sub {
+  font-size: 0.9rem;
+  color: var(--blue-600, #1565a8);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.founder-loc-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  color: var(--muted, #677487);
+}
+
+/* Narrative content column */
+.founder-letter-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blue-600, #1565a8);
+  margin-bottom: 10px;
+}
+
+.founder-eyebrow-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--blue-50, #eaf3fc);
+  color: var(--blue-600, #1565a8);
+}
+
+.founder-heading {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--navy-900, #071a30);
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.founder-byline {
+  font-size: 1.05rem;
+  color: var(--muted, #677487);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.founder-byline strong {
+  color: var(--navy-800, #0b2a4a);
+}
+
+/* Pull quote */
+.founder-pull-quote {
+  position: relative;
+  background: linear-gradient(135deg, rgba(31, 123, 208, 0.07) 0%, rgba(245, 165, 36, 0.09) 100%);
+  border-left: 4px solid var(--accent, #f5a524);
+  padding: 18px 24px;
+  border-radius: 0 16px 16px 0;
+  margin-bottom: 24px;
+}
+
+.founder-pull-quote-text {
+  font-family: var(--font-head);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--navy-900, #071a30);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Letter body */
+.founder-body {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink-2, #3d4b5c);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.founder-body p {
+  margin: 0;
+}
+
+.founder-body p strong {
+  color: var(--navy-900, #071a30);
+  font-weight: 600;
+}
+
+/* Sign-off & signature */
+.founder-signoff {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line, #dfe6ee);
+  margin-top: 6px;
+}
+
+.founder-sign-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-warm-regards {
+  font-size: 0.95rem;
+  color: var(--muted, #677487);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.founder-signature-render {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.85rem;
+  color: var(--navy-800, #0b2a4a);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 2px 0 6px;
+  transform: rotate(-1.5deg);
+  display: inline-block;
+}
+
+.founder-sign-name {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy-900, #071a30);
+  margin: 0;
+}
+
+.founder-sign-role {
+  font-size: 0.88rem;
+  color: var(--blue-600, #1565a8);
+  font-weight: 600;
+  margin: 0;
+}
+
+.founder-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Core pillars below the message */
+.founder-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.founder-pillar-card {
+  background: var(--g-surface, rgba(255, 255, 255, 0.65));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--g-border-soft, rgba(255, 255, 255, 0.6));
+  border-radius: 18px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(11, 42, 74, 0.04);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.founder-pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(11, 42, 74, 0.08);
+}
+
+.founder-pillar-icon-box {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--blue-50, #eaf3fc);
+  color: var(--blue-600, #1565a8);
+  margin-bottom: 4px;
+}
+
+.founder-pillar-title {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-900, #071a30);
+  margin: 0;
+}
+
+.founder-pillar-desc {
+  font-size: 0.88rem;
+  color: var(--ink-2, #3d4b5c);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .founder-card {
+    grid-template-columns: 320px 1fr;
+    gap: 36px;
+    padding: 36px;
+  }
+}
+
+@media (max-width: 860px) {
+  .founder-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 28px;
+  }
+
+  .founder-media-col {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .founder-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .founder-signoff {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .founder-actions {
+    width: 100%;
+  }
+
+  .founder-actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}

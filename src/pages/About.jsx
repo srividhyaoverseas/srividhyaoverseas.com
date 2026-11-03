@@ -1,5 +1,6 @@
 import Seo from '../components/Seo.jsx';
 import { PageHero, SectionHeading, CTABand, CheckList, Journey } from '../components/ui.jsx';
+import FounderMessage from '../components/FounderMessage.jsx';
 import { team } from '../data/people.js';
 import VideoTestimonials from '../components/VideoTestimonials.jsx';
 import { journey } from '../data/services.js';
@@ -59,6 +60,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <FounderMessage id="founder" />
 
       <section className="section section-alt">
         <div className="container">
