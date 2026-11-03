@@ -92,6 +92,14 @@ export const mbbsCountries = [
     ],
     universities: [
       {
+        name: 'Asian International University named after Satkynbai Tentisheiv',
+        image: '/assets/aistudio/ASMI-portrait-main-building-768x1029_d1de30ef.png',
+        badge: 'Main Campus Building',
+        formerName: 'Formerly Asian Medical Institute (ASMI)',
+        note: 'Kant, Kyrgyzstan • Recognised by NMC & WHO with modern teaching hospitals and on-campus Indian mess.',
+        tags: ['NMC & WHO Compliant', '5+1 Years English Medium', 'Indian Mess On-Campus']
+      },
+      {
         name: 'Osh State University',
         image: '/assets/aistudio/osh-state-medical-university.webp',
         badge: 'Main Campus • Osh',
@@ -122,14 +130,6 @@ export const mbbsCountries = [
         formerName: 'Faculty of Medicine (JASU)',
         note: 'Jalal-Abad, Kyrgyzstan • Government university established in 1993, NMC & WHO recognized, offering 5-year English-medium MD/MBBS with multi-specialty teaching hospitals and on-campus Indian mess.',
         tags: ['Government Medical Faculty', 'NMC & WHO Recognized', '5+1 Years English Medium', 'Indian Mess & Hostels']
-      },
-      {
-        name: 'Asian International University named after Satkynbai Tentisheiv',
-        image: '/assets/aistudio/ASMI-portrait-main-building-768x1029_d1de30ef.png',
-        badge: 'Main Campus Building',
-        formerName: 'Formerly Asian Medical Institute (ASMI)',
-        note: 'Kant, Kyrgyzstan • Recognised by NMC & WHO with modern teaching hospitals and on-campus Indian mess.',
-        tags: ['NMC & WHO Compliant', '5+1 Years English Medium', 'Indian Mess On-Campus']
       },
       {
         name: 'Kyrgyz-Russian Slavic University',
