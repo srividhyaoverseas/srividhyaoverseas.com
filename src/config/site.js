@@ -52,7 +52,7 @@ export const SITE = {
   formEndpoint: '',
   // TODO: add real profile links; empty ones are hidden.
   social: {
-    instagram: '',
+    instagram: 'https://www.instagram.com/srividhyaoverseas/',
     facebook: '',
     youtube: 'https://www.youtube.com/@SriVidhyaOverseas',
     linkedin: '',

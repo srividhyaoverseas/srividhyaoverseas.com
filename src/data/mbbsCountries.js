@@ -90,7 +90,7 @@ export const mbbsCountries = [
       'Indian food available in most university hostels',
       'Direct and connecting flights from Indian cities',
     ],
-    universities: ['Osh State University', 'Kyrgyz State Medical Academy', 'International School of Medicine', 'Jalal-Abad State University', 'Asian Medical Institute', 'International Higher School of Medicine'],
+    universities: ['Osh State University', 'Kyrgyz State Medical Academy', 'International School of Medicine', 'Jalal-Abad State University', 'Asian International University named after Satkynbai Tentisheiv', 'International Higher School of Medicine'],
     life: 'Continental climate with cold winters. Living costs are among the lowest of all MBBS destinations.',
     faqs: [
       { q: 'What are the MBBS fees in Kyrgyzstan?', a: 'Tuition generally ranges from ₹3 to ₹5 lakh per year. Hostel and food are additional. Fees vary by university.' },

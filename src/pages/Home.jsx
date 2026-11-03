@@ -247,6 +247,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ VIDEO TESTIMONIALS ============ */}
+      <section className="section" id="student-stories">
+        <div className="container">
+          <VideoTestimonials />
+        </div>
+      </section>
+
       {/* ============ PATHWAYS (BENTO) ============ */}
       <section className="section">
         <div className="container">
@@ -366,13 +373,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ============ VIDEO TESTIMONIALS ============ */}
-      <section className="section" id="student-stories">
-        <div className="container">
-          <VideoTestimonials />
         </div>
       </section>
 
