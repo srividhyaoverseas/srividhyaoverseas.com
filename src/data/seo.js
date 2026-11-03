@@ -236,7 +236,7 @@ function studyCountryPage(c) {
     ],
     faqs: c.faqs,
     service: { name: `Study in ${c.name} – Admission & Visa Guidance`, type: `Educational consulting – ${c.name} admissions` },
-    itemList: c.universities.map((u) => ({ name: u })),
+    itemList: c.universities.map((u) => ({ name: typeof u === 'object' && u ? u.name : u })),
   };
 }
 
@@ -262,7 +262,7 @@ function mbbsCountryPage(c) {
     ],
     faqs: c.faqs,
     service: { name: `MBBS in ${c.name} – Admission Guidance`, type: 'Educational consulting – MBBS abroad admissions' },
-    itemList: c.universities.map((u) => ({ name: u })),
+    itemList: c.universities.map((u) => ({ name: typeof u === 'object' && u ? u.name : u })),
   };
 }
 

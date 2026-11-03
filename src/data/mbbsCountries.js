@@ -91,8 +91,22 @@ export const mbbsCountries = [
       'Direct and connecting flights from Indian cities',
     ],
     universities: [
-      'Osh State University',
-      'Kyrgyz State Medical Academy',
+      {
+        name: 'Osh State University',
+        image: '/assets/aistudio/osh-state-medical-university.webp',
+        badge: 'Main Campus • Osh',
+        formerName: 'International Medical Faculty (OshSU)',
+        note: 'Osh, Kyrgyzstan • Premier government university founded in 1939 with top NMC/FMGE results, multi-specialty clinical hospitals, and dedicated Indian mess and hostel facilities.',
+        tags: ['Top Government University', 'NMC & WHO Recognized', '5+1 Years English Medium', 'Highest FMGE Track Record']
+      },
+      {
+        name: 'Kyrgyz State Medical Academy',
+        image: '/assets/aistudio/images__1__001eb683.jpg',
+        badge: 'Main Campus • Bishkek',
+        formerName: 'I.K. Akhunbaev Kyrgyz State Medical Academy (KSMA)',
+        note: 'Bishkek, Kyrgyzstan • Premier national medical academy established in 1939, accredited by NMC & WHO, featuring multi-specialty clinical hospitals, top FMGE track record, and dedicated Indian mess and hostel facilities.',
+        tags: ['Oldest Medical Academy (Est. 1939)', 'NMC & WHO Recognized', '5+1 Years English Medium', 'Indian Mess & Hostels']
+      },
       {
         name: 'International Higher School of Medicine',
         image: '/assets/aistudio/--_optimized_b62b568d.jpg',
@@ -101,7 +115,14 @@ export const mbbsCountries = [
         note: 'Bishkek, Kyrgyzstan • Highly reputed among Indian students with English-medium MBBS, modern simulation centres, and extensive affiliated teaching hospitals.',
         tags: ['NMC & WHO Recognized', 'Bishkek Campus', '5+1 Years English Medium', 'Indian Mess & Hostels']
       },
-      'Jalal-Abad State University',
+      {
+        name: 'Jalal-Abad State University',
+        image: '/assets/aistudio/Jalalabad-State-Medical-University_92afd6c7.webp',
+        badge: 'Medical Faculty • Jalal-Abad',
+        formerName: 'Faculty of Medicine (JASU)',
+        note: 'Jalal-Abad, Kyrgyzstan • Government university established in 1993, NMC & WHO recognized, offering 5-year English-medium MD/MBBS with multi-specialty teaching hospitals and on-campus Indian mess.',
+        tags: ['Government Medical Faculty', 'NMC & WHO Recognized', '5+1 Years English Medium', 'Indian Mess & Hostels']
+      },
       {
         name: 'Asian International University named after Satkynbai Tentisheiv',
         image: '/assets/aistudio/ASMI-portrait-main-building-768x1029_d1de30ef.png',
@@ -110,7 +131,14 @@ export const mbbsCountries = [
         note: 'Kant, Kyrgyzstan • Recognised by NMC & WHO with modern teaching hospitals and on-campus Indian mess.',
         tags: ['NMC & WHO Compliant', '5+1 Years English Medium', 'Indian Mess On-Campus']
       },
-      'Kyrgyz-Russian Slavic University'
+      {
+        name: 'Kyrgyz-Russian Slavic University',
+        image: '/assets/aistudio/1778139569465-46446_b80c4ded.webp',
+        badge: 'Main Campus • Bishkek',
+        formerName: 'KRSU named after Boris Yeltsin (Medical Faculty)',
+        note: 'Bishkek, Kyrgyzstan • Prestigious joint interstate university founded in 1993, NMC & WHO recognized with multi-specialty clinical training centres, modern labs, and English-medium MBBS.',
+        tags: ['Joint Interstate University', 'NMC & WHO Recognized', '5+1 Years English Medium', 'Indian Mess & Hostels']
+      }
     ],
     life: 'Continental climate with cold winters. Living costs are among the lowest of all MBBS destinations.',
     faqs: [
