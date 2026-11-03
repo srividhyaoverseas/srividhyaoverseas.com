@@ -78,7 +78,57 @@ export default function MbbsCountry({ slug }) {
 
             <h2>Top medical universities in {c.name}</h2>
             <ul className="uni-grid">
-              {c.universities.map((u) => <li key={u}>{u}</li>)}
+              {c.universities.map((u) => {
+                const isObj = typeof u === 'object' && u !== null;
+                const name = isObj ? u.name : u;
+                const img = isObj ? u.image : null;
+                const badge = isObj ? u.badge : null;
+                const former = isObj ? u.formerName : null;
+                const note = isObj ? u.note : null;
+                const tags = isObj ? u.tags : null;
+
+                if (img) {
+                  return (
+                    <li key={name} className="uni-card-featured">
+                      <div className="uni-card-media">
+                        <img
+                          src={img}
+                          alt={`${name} main building`}
+                          className="uni-card-img"
+                          loading="lazy"
+                        />
+                        {badge && <span className="uni-card-badge">{badge}</span>}
+                      </div>
+                      <div className="uni-card-info">
+                        <div className="uni-card-title-row">
+                          <span className="uni-card-cap" aria-hidden="true">🎓</span>
+                          <div>
+                            <strong className="uni-card-name">{name}</strong>
+                            {former && <span className="uni-card-former">{former}</span>}
+                          </div>
+                        </div>
+                        {note && <p className="uni-card-note">{note}</p>}
+                        {tags && tags.length > 0 && (
+                          <div className="uni-card-footer">
+                            {tags.map((t) => (
+                              <span key={t} className="uni-tag">✓ {t}</span>
+                            ))}
+                          </div>
+                        )}
+                        <button
+                          type="button"
+                          className="uni-card-cta"
+                          onClick={() => openEnquiry({ interest: 'MBBS Abroad', country: `${c.name} - ${name}` })}
+                        >
+                          Check Fees & Seat Availability →
+                        </button>
+                      </div>
+                    </li>
+                  );
+                }
+
+                return <li key={name}>{name}</li>;
+              })}
             </ul>
             <p className="muted small">University names are for reference. We confirm each programme’s NMC compliance and current fees before recommending it.</p>
 

@@ -30,7 +30,7 @@ export const blogPosts = [
       { h: 'Eligibility', list: ['NEET-UG qualified', '50% PCB in 12th (40% reserved categories)', '17 years by 31st December'] },
       { h: 'Admission process', list: ['Free counselling and university selection', 'Application with 10th, 12th, NEET and passport copies', 'Admission letter', 'Invitation letter and visa', 'Travel and university registration'] },
       { h: 'Living costs and student life', p: ['Living costs are low compared to most countries. Winters are cold, so warm clothing is essential. Many hostels provide Indian food.'] },
-      { h: 'Popular universities', list: ['Osh State University', 'Kyrgyz State Medical Academy', 'International School of Medicine', 'Jalal-Abad State University', 'Asian International University named after Satkynbai Tentisheiv'] },
+      { h: 'Popular universities', list: ['Osh State University', 'Kyrgyz State Medical Academy', 'International Higher School of Medicine', 'Jalal-Abad State University', 'Asian International University named after Satkynbai Tentisheiv'] },
     ],
   },
   {

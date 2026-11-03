@@ -90,7 +90,28 @@ export const mbbsCountries = [
       'Indian food available in most university hostels',
       'Direct and connecting flights from Indian cities',
     ],
-    universities: ['Osh State University', 'Kyrgyz State Medical Academy', 'International School of Medicine', 'Jalal-Abad State University', 'Asian International University named after Satkynbai Tentisheiv', 'International Higher School of Medicine'],
+    universities: [
+      'Osh State University',
+      'Kyrgyz State Medical Academy',
+      {
+        name: 'International Higher School of Medicine',
+        image: '/assets/aistudio/--_optimized_b62b568d.jpg',
+        badge: 'Main Campus • Bishkek',
+        formerName: 'Formerly / also known as International School of Medicine (ISM)',
+        note: 'Bishkek, Kyrgyzstan • Highly reputed among Indian students with English-medium MBBS, modern simulation centres, and extensive affiliated teaching hospitals.',
+        tags: ['NMC & WHO Recognized', 'Bishkek Campus', '5+1 Years English Medium', 'Indian Mess & Hostels']
+      },
+      'Jalal-Abad State University',
+      {
+        name: 'Asian International University named after Satkynbai Tentisheiv',
+        image: '/assets/aistudio/ASMI-portrait-main-building-768x1029_d1de30ef.png',
+        badge: 'Main Campus Building',
+        formerName: 'Formerly Asian Medical Institute (ASMI)',
+        note: 'Kant, Kyrgyzstan • Recognised by NMC & WHO with modern teaching hospitals and on-campus Indian mess.',
+        tags: ['NMC & WHO Compliant', '5+1 Years English Medium', 'Indian Mess On-Campus']
+      },
+      'Kyrgyz-Russian Slavic University'
+    ],
     life: 'Continental climate with cold winters. Living costs are among the lowest of all MBBS destinations.',
     faqs: [
       { q: 'What are the MBBS fees in Kyrgyzstan?', a: 'Tuition generally ranges from ₹3 to ₹5 lakh per year. Hostel and food are additional. Fees vary by university.' },

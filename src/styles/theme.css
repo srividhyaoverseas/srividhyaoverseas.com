@@ -679,3 +679,156 @@ th, td { border-bottom-color: rgba(11, 42, 74, 0.08); }
   .page-hero .enquiry { background: rgba(11, 42, 74, 0.92); }
   .modal { background: #fff; }
 }
+
+/* ---------- Featured University Card (Campus Photo) ---------- */
+.uni-grid li.uni-card-featured {
+  grid-column: 1 / -1;
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: stretch;
+  border-radius: 16px;
+  background: var(--g-surface-strong, #fff);
+  border: 1px solid rgba(15, 33, 55, 0.14);
+  box-shadow: 0 10px 24px -10px rgba(15, 33, 55, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.uni-grid li.uni-card-featured:hover {
+  transform: translateY(-2px);
+  border-color: rgba(31, 123, 208, 0.4);
+  box-shadow: 0 14px 30px -10px rgba(15, 33, 55, 0.18);
+}
+.uni-grid li.uni-card-featured::before {
+  content: none !important;
+  display: none !important;
+}
+.uni-card-media {
+  position: relative;
+  min-height: 180px;
+  background: #0b2a4a;
+  overflow: hidden;
+}
+.uni-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.uni-grid li.uni-card-featured:hover .uni-card-img {
+  transform: scale(1.04);
+}
+.uni-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(11, 42, 74, 0.9);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.uni-card-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+}
+.uni-card-info {
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.uni-card-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.uni-card-cap {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.uni-card-name {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--navy-800);
+  line-height: 1.35;
+}
+.uni-card-former {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--blue-600);
+  font-weight: 600;
+  margin-top: 3px;
+}
+.uni-card-note {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.uni-card-footer {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.uni-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0c4a6e;
+  background: #e0f2fe;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.uni-card-cta {
+  align-self: flex-start;
+  margin-top: 6px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--blue-600);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.uni-card-cta:hover {
+  color: var(--blue-700);
+}
+@media (max-width: 680px) {
+  .uni-grid li.uni-card-featured {
+    grid-template-columns: 1fr;
+  }
+  .uni-card-media {
+    height: 190px;
+  }
+  .uni-card-info {
+    padding: 16px;
+  }
+}
+
