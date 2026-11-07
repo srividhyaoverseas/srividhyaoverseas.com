@@ -8,7 +8,7 @@ export default function FounderMessage({ id = 'founder-message', compact = false
   const [activeTab, setActiveTab] = useState('all');
 
   const founderPhoto = '/assets/aistudio/WhatsApp_Image_2026-10-01_at_11.06.48_PM_989d1a41.jpeg';
-  const coFounderPhoto = '/assets/aistudio/WhatsApp_Image_2026-11-04_at_1.17.24_AM_dfe3c6d8.jpeg';
+  const coFounderPhoto = '/assets/aistudio/WhatsApp_Image_2026-11-07_at_11.14.29_PM_d7256dd3.jpeg';
 
   const leaders = [
     {
@@ -44,7 +44,7 @@ export default function FounderMessage({ id = 'founder-message', compact = false
       badge: 'Co-Founder & Mentor',
       pillClass: 'cofounder',
       photo: coFounderPhoto,
-      photoPosition: 'center 20%',
+      photoPosition: 'center 50%',
       eyebrow: 'Co-Founder’s Vision',
       heading: 'A Message from the Co-Founder',
       pullQuote: '“Together, we work towards one vision: Making global education accessible and helping students turn their dreams into reality.”',
@@ -131,7 +131,12 @@ export default function FounderMessage({ id = 'founder-message', compact = false
             className={`founder-tab-btn ${activeTab === 'cofounder' ? 'is-active' : ''}`}
             onClick={() => setActiveTab('cofounder')}
           >
-            <img src={coFounderPhoto} alt="Pruthvi Raj Azmeera" className="founder-tab-avatar" />
+            <img
+              src={coFounderPhoto}
+              alt="Pruthvi Raj Azmeera"
+              className="founder-tab-avatar"
+              style={{ objectPosition: 'center 65%' }}
+            />
             <span>Pruthvi Raj Azmeera</span>
             <span className="founder-tab-role">Co-Founder</span>
           </button>

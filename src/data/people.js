@@ -48,7 +48,7 @@ export const team = [
   {
     name: 'Pruthvi Raj Azmeera',
     role: 'Co-Founder – Sri Vidhya Overseas',
-    photo: '/assets/aistudio/WhatsApp_Image_2026-11-04_at_1.17.24_AM_dfe3c6d8.jpeg',
+    photo: '/assets/aistudio/WhatsApp_Image_2026-11-07_at_11.14.29_PM_d7256dd3.jpeg',
     bio: 'Committed to helping students explore international education opportunities, make informed decisions, and turn their global ambitions into reality.',
   },
 ];
